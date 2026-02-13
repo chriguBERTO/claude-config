@@ -6,7 +6,7 @@ Steps:
 3. Stage the appropriate files with `git add`
 4. Create a commit with a compact, clear, descriptive message following conventional commits format
 5. Push to the remote branch (create remote branch if needed with `-u origin <branch>`)
-6. Prepare a Pull Request with:
+6. Create a Pull Request using `gh pr create` with:
    - A clear title summarizing the changes
    - A description with:
      - Summary of what changed and why
