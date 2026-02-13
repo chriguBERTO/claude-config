@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Un-ignore few files
+!.gitignore
+!README.md
+!agents/
+!agents/**
+!commands/
+!commands/**
