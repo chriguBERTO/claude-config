@@ -28,7 +28,7 @@ All agents are defined in `.claude/agents/`. Each outputs a numbered finding lis
 2. Collect changed files: `git diff --name-only <base>...HEAD`
 3. Read plan files if they exist in `[.claude|.ai|.cursor]/plans/` (plan.md, architecture.md, ux.md)
 4. Ask the user which reviewers to include (default: all applicable). Skip designer if no UI changes; skip platform-engineer if no Node scripts or `tools/` changes.
-5. Create `review.md` in the plan directory (format at end of this file)
+5. Create `review_frontend_%Y%m%d.md` in the plan directory (format at end of this file)
 
 ### 2. Parallel Review
 
@@ -48,7 +48,7 @@ If a finding affects the backend package, the reviewer must note this explicitly
    - **Blockers** — must fix (Critical/High)
    - **Improvements** — should fix (Medium)
    - **Suggestions** — optional (Low)
-4. Update `review.md`, present summary to user
+4. Update `review_frontend_%Y%m%d.md`, present summary to user
 
 ### 4. User Decision
 
@@ -80,7 +80,7 @@ Present findings and ask what to address:
 3. Present summary: iterations, findings addressed vs. deferred, outstanding suggestions
 4. Ask: "Ready to commit?"
 
-## review.md Format
+## review_frontend_%Y%m%d.md Format
 
 ```markdown
 # Review: <feature>
@@ -114,7 +114,7 @@ Present findings and ask what to address:
 - Run reviewers in parallel, never sequentially
 - Present findings to user before fixing — user owns the final call
 - Re-run affected reviewers after fixes
-- Track iterations in review.md
+- Track iterations in review_frontend_%Y%m%d.md
 - Run verification after every fix cycle
 - Max 3 iterations without user confirmation
 - Only blockers are mandatory; never block on suggestions

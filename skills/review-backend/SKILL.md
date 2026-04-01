@@ -28,7 +28,7 @@ All agents are defined in `.claude/agents/`. Each outputs a numbered finding lis
 2. Collect changed files: `git diff --name-only <base>...HEAD`
 3. Read plan files if they exist in `[.claude|.ai|.cursor]/plans/` (plan.md, architecture.md)
 4. Ask the user which reviewers to include (default: all applicable). Skip data-integrity if no schema/migration changes; skip reliability if changes are trivial.
-5. Create `review.md` in the plan directory (format at end of this file)
+5. Create `review_backend_%Y%m%d.md` in the plan directory (format at end of this file)
 
 ### 2. Parallel Review
 
@@ -48,7 +48,7 @@ If a finding affects the frontend package, the reviewer must note this explicitl
    - **Blockers** — must fix (Critical/High)
    - **Improvements** — should fix (Medium)
    - **Suggestions** — optional (Low)
-4. Update `review.md`, present summary to user
+4. Update `review_backend_%Y%m%d.md`, present summary to user
 
 ### 4. User Decision
 
@@ -76,11 +76,11 @@ Present findings and ask what to address:
 ### 7. Approve
 
 1. Final verification pass
-2. Update `review.md`: mark approved, record final status per reviewer
+2. Update `review_backend_%Y%m%d.md`: mark approved, record final status per reviewer
 3. Present summary: iterations, findings addressed vs. deferred, outstanding suggestions
 4. Ask: "Ready to commit?"
 
-## review.md Format
+## review_backend_%Y%m%d.md Format
 
 ```markdown
 # Review: <feature>
@@ -114,7 +114,7 @@ Present findings and ask what to address:
 - Run reviewers in parallel, never sequentially
 - Present findings to user before fixing — user owns the final call
 - Re-run affected reviewers after fixes
-- Track iterations in review.md
+- Track iterations in review_backend_%Y%m%d.md
 - Run verification after every fix cycle
 - Max 3 iterations without user confirmation
 - Only blockers are mandatory; never block on suggestions
