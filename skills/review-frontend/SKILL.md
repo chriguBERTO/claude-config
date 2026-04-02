@@ -92,11 +92,11 @@ Present findings and ask what to address:
 
 ## Iteration 1
 ### Blockers
-- [ ] [<reviewer>] <finding> — `<file>` — <description>
+- [ ] B<number> [<reviewer>] <finding> — `<file>` — <description>
 ### Improvements
-- [ ] [<reviewer>] <finding> — `<file>` — <description>
+- [ ] I<number> [<reviewer>] <finding> — `<file>` — <description>
 ### Suggestions
-- [ ] [<reviewer>] <finding> — `<file>` — <description>
+- [ ] S<number> [<reviewer>] <finding> — `<file>` — <description>
 ### Decision: <what user chose>
 ### Fixes: <what was fixed>
 
