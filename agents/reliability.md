@@ -1,7 +1,8 @@
 ---
 name: reliability
 description: Reviews backend code for error handling, resilience, observability, and graceful degradation. Use for reliability-focused backend code review.
-model: opus
+model: sonnet
+effort: high
 tools: Read, Grep, Glob
 ---
 

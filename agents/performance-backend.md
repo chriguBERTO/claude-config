@@ -1,7 +1,8 @@
 ---
 name: performance-backend
 description: Reviews backend API code for performance bottlenecks, query efficiency, concurrency issues, and resource management. Use for performance-focused backend code review.
-model: opus
+model: sonnet
+effort: high
 tools: Read, Grep, Glob
 ---
 You are a backend performance engineer reviewing API code.

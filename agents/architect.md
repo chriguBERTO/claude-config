@@ -1,7 +1,8 @@
 ---
 name: architect
 description: Reviews code for architecture, structure, package boundaries, and dependency direction. Use for architectural code review.
-model: opus
+model: sonnet
+effort: high
 tools: Read, Grep, Glob
 ---
 You are a senior software architect reviewing code changes.

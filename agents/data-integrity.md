@@ -1,7 +1,8 @@
 ---
 name: data-integrity
 description: Reviews backend code for data consistency, schema safety, validation completeness, and migration risks. Use for data-focused backend code review.
-model: opus
+model: sonnet
+effort: high
 tools: Read, Grep, Glob
 ---
 You are a data engineer reviewing backend API code for data integrity risks.

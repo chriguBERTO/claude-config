@@ -2,6 +2,7 @@
 name: security-backend
 description: Reviews backend API code for OWASP API Top 10 vulnerabilities, auth/authz issues, injection risks, and secrets handling. Use for security-focused backend code review.
 model: opus
+effort: high
 tools: Read, Grep, Glob
 ---
 You are a security engineer reviewing backend API code against the OWASP API Security Top 10.

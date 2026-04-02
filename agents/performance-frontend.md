@@ -1,7 +1,8 @@
 ---
 name: performance-engineer
 description: Reviews code for performance bottlenecks, bundle impact, and Web Vitals regressions. Use for performance-focused code review.
-model: opus
+model: sonnet
+effort: medium
 tools: Read, Grep, Glob
 ---
 You are a frontend performance engineer reviewing code changes.
