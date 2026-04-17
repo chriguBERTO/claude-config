@@ -3,5 +3,5 @@
     "ENABLE_TOOL_SEARCH": "true",
     "CLAUDE_CODE_DEFAULT_EFFORT": "medium"
   },
-  "effortLevel": "high"
+  "effortLevel": "max"
 }
