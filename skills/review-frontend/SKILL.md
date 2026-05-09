@@ -18,7 +18,7 @@ Multi-agent code review. Specialist agents review in parallel, findings are cons
 | **performance-frontend** | Render efficiency, bundle impact, Web Vitals             |
 | **platform-engineer**    | Windows compatibility of Node scripts and build tooling  |
 
-All agents are defined in `.claude/agents/`. Each outputs a numbered finding list or "APPROVED".
+All agents are defined in `[.ai|.claude|.cursor]/agents/`. Each outputs a numbered finding list or "APPROVED".
 
 ## Steps
 

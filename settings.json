@@ -3,5 +3,6 @@
     "ENABLE_TOOL_SEARCH": "true",
     "CLAUDE_CODE_DEFAULT_EFFORT": "medium"
   },
-  "effortLevel": "max"
+  "effortLevel": "max",
+  "model": "opus"
 }
