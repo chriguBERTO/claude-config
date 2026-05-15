@@ -3,6 +3,18 @@
     "ENABLE_TOOL_SEARCH": "true",
     "CLAUDE_CODE_DEFAULT_EFFORT": "medium"
   },
+  "permissions": {
+    "deny": [  
+      "Bash(*infisical *)",
+      "Read(//**/.infisical/**)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/secrets/**)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Read(./**/credentials*)"
+    ]
+  },
   "effortLevel": "max",
   "model": "opus"
 }
