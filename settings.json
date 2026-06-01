@@ -4,7 +4,7 @@
     "CLAUDE_CODE_DEFAULT_EFFORT": "medium"
   },
   "permissions": {
-    "deny": [  
+    "deny": [
       "Bash(*infisical *)",
       "Read(//**/.infisical/**)",
       "Read(./.env)",
@@ -13,8 +13,11 @@
       "Read(./**/*.pem)",
       "Read(./**/*.key)",
       "Read(./**/credentials*)"
+    ],
+    "allow": [
+      "Bash(git mv *)"
     ]
   },
-  "effortLevel": "max",
+  "effortLevel": "xhigh",
   "model": "opus"
 }
