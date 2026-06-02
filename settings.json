@@ -19,5 +19,9 @@
     ]
   },
   "effortLevel": "xhigh",
-  "model": "opus"
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccstatusline@latest"
+  }
 }
