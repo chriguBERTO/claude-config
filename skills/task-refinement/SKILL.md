@@ -1,6 +1,6 @@
 ---
 name: task-refinement
-description: Inverview the user relentlessly about a plan or design until reaching a shared understanding, resolving each branch of the decision tree. Use this skill every time the user presents any request to implement, fix, add, change, refactor, or build something, stress-test a plan, get challenged on their design, or mentions "task refinement".
+description: Inverview the user relentlessly about a plan or design until reaching a shared understanding, resolving each branch of the decision tree. Use every time the user presents any request to implement, fix, add, change, refactor, or build something, stress-test a plan, get challenged on their design, or mentions "/task-refinement".
 model: opus
 effort: high
 defaultMode: plan
