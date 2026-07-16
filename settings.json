@@ -1,13 +1,9 @@
 {
   "env": {
     "ENABLE_TOOL_SEARCH": "true",
-    "CLAUDE_CODE_DEFAULT_EFFORT": "medium"
+    "CLAUDE_CODE_DEFAULT_EFFORT": "high"
   },
   "permissions": {
-    "allow": [
-      "Bash(git mv *)",
-      "Bash(git add *)"
-    ],
     "deny": [
       "Bash(*infisical *)",
       "Read(//**/.infisical/**)",
@@ -19,10 +15,10 @@
       "Read(./**/credentials*)"
     ]
   },
-  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "npx ccstatusline@latest"
   },
-  "effortLevel": "xhigh"
+  "theme": "dark",
+  "tui": "fullscreen"
 }
