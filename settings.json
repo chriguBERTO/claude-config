@@ -19,6 +19,6 @@
     "type": "command",
     "command": "npx ccstatusline@latest"
   },
-  "theme": "dark",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "theme": "dark"
 }
