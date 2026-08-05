@@ -10,7 +10,7 @@ Break a plan into independently-grabbable issues using vertical slices (tracer b
 ## Sources
 
 Read the below source files. If they do not exist, inform the user and stop.
-- [issue-tracker.md](~/.claude/skills/to-issues/issue-tracker.md) — issues and PRDs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
+- [issue-tracker.md](~/.claude/skills/to-issues/issue-tracker.md) — issues and specs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
 - [triage-labels.md](~/.claude/skills/triage/triage-labels.md) — triage labels default vocabulary
 
 ## Steps

@@ -9,7 +9,7 @@ This skill takes the current conversation context and codebase understanding and
 ## Sources
 
 Read the below source files. If they do not exist, inform the user and stop.
-- [issue-tracker.md](~/.claude/skills/to-issues/issue-tracker.md) — issues and PRDs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
+- [issue-tracker.md](~/.claude/skills/to-issues/issue-tracker.md) — issues and specs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
 - [triage-labels.md](~/.claude/skills/triage/triage-labels.md) — triage labels default vocabulary
 
 
@@ -80,4 +80,4 @@ A description of the things that are out of scope for this PRD.
 
 Any further notes about the feature.
 
-</prd-template>
+</spec-template>
