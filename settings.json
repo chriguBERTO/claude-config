@@ -20,5 +20,38 @@
     "command": "npx ccstatusline@latest"
   },
   "tui": "fullscreen",
-  "theme": "dark"
+  "theme": "dark",
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: yuvoi (GitHub org — inferred from remote `github.com/yuvoi/yuvoi-flow` and issue-filing targets `yuvoi/yuvoi-backend`, `yuvoi/yuvoi-frontend`)",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: private (yuvoi/yuvoi-flow, confirmed via gh)",
+      "**Internal sharing / snippet hosting**: Slack workspace yuvoi.slack.com (channels #bugsreporting, #productdevelopment) via MCP server in `.mcp.json` — used for triage input, not a publish target",
+      "**Secrets management**: None configured",
+      "**Default / protected branches**: no default branch set (origin/HEAD unset); no rulesets or protected branches listed on yuvoi/yuvoi-flow — treat as unprotected",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Source control**: yuvoi/yuvoi-flow (this repo, private) and its remote `origin` only; read-only reference worktrees under `refs/` (gitignored, local-only) pinned to `yuvoi/yuvoi-backend` (branch `prod`) and `yuvoi/yuvoi-frontend` (branch `main`) — CLAUDE.md instructs never to commit into these worktrees",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: Slack (#bugsreporting, #productdevelopment) via MCP; GitHub Issues in yuvoi/yuvoi-backend and yuvoi/yuvoi-frontend via `gh`",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: files matching repo .gitignore patterns (`.env`, `.env.local`, `.env.*.local`, `*.key`, and one unusual redacted pattern) — treat as credential/secret material, never commit or share",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace/host/container with `prod` or `production` as a whole name segment — notably the `refs/yuvoi-backend` worktree tracks `origin/prod` (read-only, analysis source of truth, never to be pushed to or committed into)",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development / ops orchestration — triaging Slack bug/feature reports into GitHub Issues for yuvoi-backend and yuvoi-frontend (no production code lives in this repo)",
+      "**Trusted repo**: yuvoi/yuvoi-flow (private) at /home/user/Documents/repos/yuvoi-flow and its remote `origin`; confidential material is fine to commit here given private visibility, but content from the read-only `refs/` worktrees (backend `prod`, frontend `main`) is sourced externally and is not this repo's own work",
+      "**Org-specific CLIs**: None configured",
+      "routine under yuvoi-flow/ prefix: `gh issue list/create` against `yuvoi/yuvoi-backend` and `yuvoi/yuvoi-frontend`, and read/reset operations against the `refs/yuvoi-backend` and `refs/yuvoi-frontend` worktrees, are the expected day-to-day workflow for this repo"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(git -C refs/yuvoi-backend commit:*) — writes into the read-only reference worktree pinned to origin/prod, which CLAUDE.md forbids",
+      "Bash(git -C refs/yuvoi-frontend commit:*) — writes into the read-only reference worktree pinned to origin/main, which CLAUDE.md forbids"
+    ]
+  }
 }
