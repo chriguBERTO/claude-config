@@ -81,3 +81,9 @@ A description of the things that are out of scope for this PRD.
 Any further notes about the feature.
 
 </spec-template>
+
+## Step 4: Hand off
+
+The spec was written inside this conversation and shares its blind spots. Tell the user to run
+`/fact-check <spec-ref>` in a fresh session before `/to-tickets`, so the spec's claims about the
+current code are re-tested by a reader who has not seen this discussion.
