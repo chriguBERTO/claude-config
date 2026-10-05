@@ -15,10 +15,45 @@
       "Read(./**/credentials*)"
     ]
   },
+  "model": "claude-fable-5-1",
   "statusLine": {
     "type": "command",
     "command": "npx ccstatusline@latest"
   },
   "tui": "fullscreen",
-  "theme": "dark"
+  "theme": "dark",
+  "autoMode": {
+    "soft_deny": [
+      "$defaults",
+      "Bash(git push --force*) — this repo's origin (open-veanu/confidential-neuro-align), given default branch may be ruleset-protected despite no classic protection listed",
+      "Writes to drizzle/migrations/*classification* files or supabase schema affecting clinical/PII tables without explicit review"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: open-veanu (GitHub org hosting this repo's remote; no broader org-wide posture configured)",
+      "**Cloud provider(s)**: Supabase (project backend); None otherwise configured",
+      "**Repository visibility**: private (confirmed via gh for open-veanu/confidential-neuro-align)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: infisical (seen in shell history; used for secret retrieval in this project's workflow)",
+      "**Default / protected branches**: main (default); Protected branches: none listed via gh, Rulesets not queryable here — treat as possibly protected by ruleset, do not assume unprotected",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine with open internet",
+      "**Source control**: The trusted repo (open-veanu/confidential-neuro-align) and its origin remote (github.com/open-veanu) only",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: Supabase project backing this app (per repo docs: auth, database, edge functions) — repo-scoped only",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: this repo handles health data (DiGA/medical device compliance docs present) — treat `.env`, `drizzle/migrations/*classification*` files, and any patient/clinical data (FHIR resources, PROM/PREM, consent records) as sensitive; share only with audiences cleared for regulated health data handling",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment",
+      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (DiGA/health-app compliance-heavy development on confidential-neuro-align)",
+      "**Trusted repo**: /home/user/Documents/repos/confidential-neuro-align (open-veanu/confidential-neuro-align, private) and its origin remote",
+      "**Org-specific CLIs**: infisical (secrets), gh, bun, poetry, cap (Capacitor) — seen in this project's tooling",
+      "**routine under this repo's prefix**: read-only compliance audit agents (diga-*-audit, tr03161-*-audit) operate read-only against `.claude/skills/diga-guidelines-audit/files/` and repo scope files"
+    ]
+  }
 }
