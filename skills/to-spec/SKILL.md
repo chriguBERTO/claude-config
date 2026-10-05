@@ -9,7 +9,7 @@ This skill takes the current conversation context and codebase understanding and
 ## Sources
 
 Read the below source files. If they do not exist, inform the user and stop.
-- [issue-tracker.md](~/.claude/skills/to-issues/issue-tracker.md) — issues and specs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
+- [issue-tracker.md](~/.claude/skills/to-tickets/issue-tracker.md) — issues and specs are tracked as GitHub issues (`gh` CLI, `git remote -v`)
 - [triage-labels.md](~/.claude/skills/triage/triage-labels.md) — triage labels default vocabulary
 
 
@@ -81,3 +81,9 @@ A description of the things that are out of scope for this PRD.
 Any further notes about the feature.
 
 </spec-template>
+
+## Step 4: Hand off
+
+The spec was written inside this conversation and shares its blind spots. Tell the user to run
+`/fact-check <spec-ref>` in a fresh session before `/to-tickets`, so the spec's claims about the
+current code are re-tested by a reader who has not seen this discussion.
